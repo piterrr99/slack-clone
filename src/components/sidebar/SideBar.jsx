@@ -3,7 +3,6 @@ import { ChannelList } from './ChannelList'
 import { MessagesList } from './MessagesList'
 import { useDispatch, useSelector } from 'react-redux'
 import { authLogout } from '../../store/auth/authSlice'
-import { chatsLogout } from '../../store/chats/chatsSlice'
 import { closeSidebar } from '../../store/ui/uiSlice'
 
 export const SideBar = () => {
@@ -16,7 +15,6 @@ export const SideBar = () => {
 
     const handleLogout = ()=>{
         
-        dispatch(chatsLogout());
         dispatch(authLogout());
         
         if (screen.width<1024) {

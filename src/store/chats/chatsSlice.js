@@ -1,4 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { authLogout } from "../auth/authSlice";
+
 
 
 const initialState = {
@@ -22,9 +24,6 @@ const chatsSlice = createSlice({
         },
         setActiveChat: (state, {payload})=>{
             state.activeChat = payload
-        },
-        chatsLogout: (state)=>{
-            return state = initialState
         },
         createChannel: (state, {payload})=>{
             state.channels.push(payload)
@@ -80,13 +79,17 @@ const chatsSlice = createSlice({
             state.dms.privateMessages.push(payload);
             state.activeChat.msgs.push(payload)
         }
+    },
+    extraReducers: (builder)=>{
+        builder.addCase(authLogout, (state)=>{
+            return state = initialState
+        })
     }
 
 });
 
 export const { 
     createChannel, 
-    chatsLogout,
     deleteChannel,
     deleteMessageInChannel,
     deletePrivateMessage,
