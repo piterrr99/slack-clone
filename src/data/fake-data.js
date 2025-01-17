@@ -202,7 +202,7 @@ export const channels = [
         channelId: 1,
         channelTexts: [
             {
-                text: 'Hey, guys this is going to be the main channel',
+                text: 'Hey guys, this is going to be the main channel',
                 messageId: 1,
                 timestamp: new Date(1698003000000).getTime(),
                 senderId: 1
