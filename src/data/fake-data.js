@@ -216,7 +216,7 @@ export const channels = [
                 
             },
             {
-                text: 'Looking forward to work with you',
+                text: 'Looking forward to working with you',
                 messageId: 3,
                 timestamp: new Date(1698005000000).getTime(),
                 senderId: 2
