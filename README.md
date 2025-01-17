@@ -24,3 +24,6 @@ This repository hosts an MVP of the Slack app.
 3. react-router
 4. Moment
 5. Daisy UI, Tailwind.
+
+## How to run
+Clone the project to your local PC and run `npm run dev` in the project's root
