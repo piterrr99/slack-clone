@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+
 import { SideBar } from '../components/sidebar/SideBar'
 import { MainContent } from '../components/Main Content'
-import { useDispatch, useSelector } from 'react-redux'
 import { startLoadingChats } from '../store/chats/thunks'
 import { closeSidebar } from '../store/ui/uiSlice'
 
@@ -30,10 +31,8 @@ export const HomeScreen = () => {
 
   return (
     <div className='flex h-screen overflow-hidden' onMouseDown={handleSidebarClick}>
-
       <SideBar />
       <MainContent />
-
     </div>
   )
 }

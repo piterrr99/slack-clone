@@ -7,7 +7,7 @@ import ui from './ui/uiSlice';
 const rootReducer = {
     auth,
     chats,
-    ui
+    ui,
 };
 
 export const store = configureStore({ reducer: rootReducer })

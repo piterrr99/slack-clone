@@ -15,6 +15,7 @@ export const SideBar = () => {
 
     const handleLogout = ()=>{
         
+        localStorage.removeItem('user_info');
         dispatch(authLogout());
         
         if (screen.width<1024) {

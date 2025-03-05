@@ -11,7 +11,7 @@ export const startLogin = ( email, password )=>{
             
             dispatch(authStartChecking());
             const resp = await fetchCredentials(email, password);
-
+            localStorage.setItem('user_info', JSON.stringify(resp.user))
             dispatch(authLogin(resp.user));
             
         } catch (error) {

@@ -6,8 +6,8 @@ import { AppRouter } from './routers/AppRouter'
 export const SlackApp = () => {
   return (
     <Provider store={store}>
-        <AppRouter />
-      </Provider>
+      <AppRouter />
+    </Provider>
     
   )
 }
